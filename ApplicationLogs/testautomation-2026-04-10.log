@@ -1,0 +1,173 @@
+2026-04-10 12:37:35 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2026-04-10 12:37:39 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Navigated to URL: https://alphabetaops.com/
+2026-04-10 12:37:39 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Novice link
+2026-04-10 12:37:39 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Practice Form link
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Basic Form link
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Switched to iframe: iframe.content-iframe
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Entered username: nitin01
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Entered password
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Entered comments
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Selected gender: Male
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Selected skills
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Selected experience: 1-2 Years
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Selected automation tools
+2026-04-10 12:37:40 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Uploaded resume from: testdata/resume1.pdf
+2026-04-10 12:37:41 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Submit button
+2026-04-10 12:38:04 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2026-04-10 12:38:09 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Navigated to URL: https://alphabetaops.com/
+2026-04-10 12:38:09 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Novice link
+2026-04-10 12:38:10 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Practice Form link
+2026-04-10 12:38:10 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Basic Form link
+2026-04-10 12:38:10 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Switched to iframe: iframe.content-iframe
+2026-04-10 12:38:40 [TestNG-PoolService-1] ERROR pages.methods.HomePageMethods - Failed to enter username
+com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-8811012985974631015/package/lib/server/progress.js:86:28)
+    at FrameDispatcher._runCommand (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-8811012985974631015/package/lib/server/dispatchers/dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-8811012985974631015/package/lib/server/dispatchers/dispatcher.js:325:39)
+}
+Call log:
+-   - waiting for locator("iframe.content-iframe").contentFrame().locator("#user1name")
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:310)
+	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:265)
+	at com.microsoft.playwright.Locator.fill(Locator.java:3164)
+	at pages.methods.HomePageMethods.enterUsername(HomePageMethods.java:91)
+	at pages.steps.HomeSteps.user_fills_the_form_with_following_details(HomeSteps.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-8811012985974631015/package/lib/server/progress.js:86:28)
+    at FrameDispatcher._runCommand (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-8811012985974631015/package/lib/server/dispatchers/dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-8811012985974631015/package/lib/server/dispatchers/dispatcher.js:325:39)
+}
+Call log:
+-   - waiting for locator("iframe.content-iframe").contentFrame().locator("#user1name")
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 41 common frames omitted
+2026-04-10 12:42:14 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2026-04-10 12:42:18 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Navigated to URL: https://alphabetaops.com/
+2026-04-10 12:42:18 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Novice link
+2026-04-10 12:42:20 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Practice Form link
+2026-04-10 12:42:20 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Clicked on Basic Form link
+2026-04-10 12:42:20 [TestNG-PoolService-1] INFO  pages.methods.HomePageMethods - Switched to iframe: iframe.content-iframe
+2026-04-10 12:42:50 [TestNG-PoolService-1] ERROR pages.methods.HomePageMethods - Failed to enter username
+com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-9893094457294350511/package/lib/server/progress.js:86:28)
+    at FrameDispatcher._runCommand (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-9893094457294350511/package/lib/server/dispatchers/dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-9893094457294350511/package/lib/server/dispatchers/dispatcher.js:325:39)
+}
+Call log:
+-   - waiting for locator("iframe.content-iframe").contentFrame().locator("#user1name")
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:310)
+	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:265)
+	at com.microsoft.playwright.Locator.fill(Locator.java:3164)
+	at pages.methods.HomePageMethods.enterUsername(HomePageMethods.java:91)
+	at pages.steps.HomeSteps.user_fills_the_form_with_following_details(HomeSteps.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-9893094457294350511/package/lib/server/progress.js:86:28)
+    at FrameDispatcher._runCommand (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-9893094457294350511/package/lib/server/dispatchers/dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-9893094457294350511/package/lib/server/dispatchers/dispatcher.js:325:39)
+}
+Call log:
+-   - waiting for locator("iframe.content-iframe").contentFrame().locator("#user1name")
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 41 common frames omitted
