@@ -9,31 +9,25 @@ public class Hooks {
     private static ThreadLocal<Browser> browser = new ThreadLocal<>();
     private static ThreadLocal<BrowserContext> context = new ThreadLocal<>();
     private static ThreadLocal<Page> page = new ThreadLocal<>();
-
     public static Page getPage() {
         return page.get();
     }
-
     @Before
     public void setup() {
 
         playwright.set(Playwright.create());
-
         browser.set(
                 playwright.get().chromium().launch(
                         new BrowserType.LaunchOptions().setHeadless(false)
                 )
         );
-
         context.set(
                 browser.get().newContext(
                         new Browser.NewContextOptions().setViewportSize(1920, 1080)
                 )
         );
-
         page.set(context.get().newPage());
     }
-
     @After
     public void tearDown(Scenario scenario) {
 

@@ -1,60 +1,29 @@
 package pages.steps;
 
+import com.microsoft.playwright.Page;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import pages.methods.HomePageMethods;
-import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.*;
-import java.util.Map;
 
 public class HomeSteps {
+    public static Page page;
 
-    @Given("User is on the {string} in Chrome")
-    public void user_is_on_the_in_chrome(String url) {
-        HomePageMethods.launchBrowser(url);
+    public HomeSteps() {
+       page = Hooks.getPage();
     }
 
-    @When("User clicks on the Novice Link")
-    public void user_clicks_on_the_novice_link() {
-        HomePageMethods.clickNoviceLink();
+    @Given("the user opens the {string} page")
+    public void the_user_opens_the_page(String url) {
+        HomePageMethods.launchBrowserAndNavigateToHomePage(page,url);
     }
 
-    @And("I click on Basic form present under Practice Form Option")
-    public void practice_form() {
-        HomePageMethods.clickPracticeForm();
-        HomePageMethods.clickBasicForm();
+    @Then("the user verifies all left-sidebar menu items one by one")
+    public void the_user_verifies_all_left_sidebar_menu_items_one_by_one() {
+        HomePageMethods.verifyLeftSidebarMenuItemsOneByOne(page);
     }
-
-    @And("I Switch to Iframe")
-    public void switch_iframe() {
-        HomePageMethods.switchToIframe();
-    }
-
-    @And("User fills the form with following details")
-    public void user_fills_the_form_with_following_details(DataTable dataTable) {
-
-        Map<String, String> formData = dataTable.asMap(String.class, String.class);
-
-        HomePageMethods.enterUsername(formData.get("Username"));
-        HomePageMethods.enterPassword(formData.get("Password"));
-        HomePageMethods.enterComments(formData.get("Comments"));
-        HomePageMethods.selectGender();
-        HomePageMethods.selectSkills();
-        HomePageMethods.selectExperience(formData.get("Experience"));
-
-        String tools = formData.get("AutomationTools");
-        if (tools != null && !tools.isEmpty()) {
-            HomePageMethods.selectAutomationTools(tools.split(","));
-        }
-
-        HomePageMethods.uploadResume(formData.get("ResumePath"));
-    }
-
-    @And("I click on submit button")
-    public void click_submit_button() {
-        HomePageMethods.clickSubmit();
-    }
-
-    @Then("Form should be submitted successfully")
-    public void form_should_be_submitted_successfully() {
-        System.out.println("Form has been submitted successfully");
+    @Then("the browser is closed")
+    public void the_browser_is_closed() {
+        HomePageMethods.closeBrowser(page);
     }
 }
