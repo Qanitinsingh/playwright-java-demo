@@ -21,6 +21,7 @@ public class HomeSteps {
     @Then("the user verifies all left-sidebar menu items one by one")
     public void the_user_verifies_all_left_sidebar_menu_items_one_by_one() {
         HomePageMethods.verifyLeftSidebarMenuItemsOneByOne(page);
+        System.out.println("All left-sidebar menu items verified successfully.");
     }
     @Then("the browser is closed")
     public void the_browser_is_closed() {

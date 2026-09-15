@@ -25,7 +25,7 @@ public class HomePageMethods {
     public static void verifyLeftSidebarMenuItemsOneByOne(Page page) {
         try {
 
-            logger.info("Verifying left sidebar menu items one by one...");
+            logger.info("Verifying left sidebar menu items one by one....");
 
             Locator menuItems = page.locator(".nav-sidebar li");
 
